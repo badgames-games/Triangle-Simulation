@@ -168,6 +168,21 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "▶"
 
+[node name="DeleteButton" type="Button" parent="." unique_id=754013719]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -328.0
+offset_top = -60.0
+offset_right = -268.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "🗑️"
+
 [node name="RecordField" type="LineEdit" parent="." unique_id=1794815272]
 layout_mode = 1
 anchors_preset = 2
@@ -215,4 +230,5 @@ label_settings = SubResource("LabelSettings_hfhsn")
 [connection signal="pressed" from="VBoxContainer2/x10000" to="." method="_on_x_10000_pressed"]
 [connection signal="pressed" from="VBoxContainer2/x100000" to="." method="_on_x_100000_pressed"]
 [connection signal="pressed" from="PlayPauseButton" to="." method="_on_play_pause_button_pressed"]
+[connection signal="pressed" from="DeleteButton" to="." method="_on_delete_button_pressed"]
 [connection signal="pressed" from="RecordButton" to="." method="_on_record_button_pressed"]

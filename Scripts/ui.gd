@@ -9,10 +9,11 @@ extends Control
 @onready var recordButton: Button = $RecordButton
 @onready var recordStatus: Label = $RecordStatus
 
-var pausePlayPressed = false
-var recording = false
+var pausePlayPressed: bool = false
+var recording: bool = false
+var deleteMeshes: bool = false
+var recordedFPS: Array = []
 var targetTriangles
-var recordedFPS = []
 
 var triangles: int = 0
 var lastFps: float = 0.0
@@ -96,6 +97,9 @@ func _on_record_button_pressed() -> void:
 	else:
 		recording = false
 		recordButton.text = "⬤"
+
+func _on_delete_button_pressed() -> void:
+	deleteMeshes = true
 
 func _on_x_1_pressed() -> void:
 	instPerRender = 1

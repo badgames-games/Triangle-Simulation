@@ -2,13 +2,12 @@ extends Node3D
 
 @onready var ui: Control = $CanvasLayer/UI
 @onready var meshes: Node3D = $Meshes
-var cube = preload("uid://brx7ev2eo21mr")
-var sphere = preload("res://Scenes/Sphere.tscn")
+var cube: PackedScene = preload("uid://brx7ev2eo21mr")
+var sphere: PackedScene = preload("res://Scenes/Sphere.tscn")
 
-var targetTriangles
-var doSpawning = false
-var instScene = cube
-var sceneTri
+var doSpawning: bool = false
+var instScene: PackedScene = cube
+var sceneTri: int
 
 func _ready() -> void:
 	var sceneMesh: Mesh = instScene.instantiate().mesh
@@ -24,13 +23,17 @@ func _process(_delta: float) -> void:
 	if ui.pausePlayPressed == true and doSpawning == false:
 		print("Spawning enabled")
 		doSpawning = true
-		targetTriangles = ui.targetTriangles
 		toggleSpawning()
 	elif ui.pausePlayPressed == false and doSpawning == true:
 		print("Spawning disabled")
 		doSpawning = false
-		targetTriangles = ui.targetTriangles
 		toggleSpawning()
+	
+	if ui.deleteMeshes == true:
+		for mesh: MeshInstance3D in meshes.get_children():
+			mesh.queue_free()
+		ui.deleteMeshes = false
+		ui.triangles = 0
 
 func inst(scene, pos):
 	var instance = scene.instantiate()
@@ -39,10 +42,10 @@ func inst(scene, pos):
 
 func toggleSpawning():
 	while doSpawning == true:
-		if int(targetTriangles) == 0:
-			targetTriangles = int(INF)
+		if int(ui.targetTriangles) == 0:
+			ui.targetTriangles = int(INF)
 		for i in range(ui.instPerRender):
-			if targetTriangles != null and ui.triangles >= int(targetTriangles):
+			if ui.targetTriangles != null and ui.triangles >= int(ui.targetTriangles):
 				doSpawning = false
 				ui.pausePlayPressed = false
 				print("Target Has been reached")
