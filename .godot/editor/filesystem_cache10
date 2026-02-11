@@ -1,0 +1,15 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1770795713
+README.md::TextFile::-1::1770795492::0::1::::<><><>0<>0<><>::
+::res://Assets/::1770795663
+bad games.png::CompressedTexture2D::2823546439084907546::1770795656::1770795663::1::::<><><>0<>0<>18989e8bc811a38ce43f4d37124f0fb7<>res://.godot/imported/bad games.png-fc8f92785cce759115405179216da27f.ctex::
+icon.svg::CompressedTexture2D::5369154064117940510::1770513720::1770795607::1::::<><><>0<>0<>b8c4c0a36b10f201c6aa15b591456ae6<>res://.godot/imported/icon.svg-8193eb3d66a1b5143b8bb4c28c1dc139.ctex::
+marioMesh.png::CompressedTexture2D::6455204456050017662::1770514009::1770795607::1::::<><><>0<>0<>a82fdda93dcb66164007c54600211564<>res://.godot/imported/marioMesh.png-cb0b97b783f4231c8e40ef62a1b91983.ctex::
+::res://Scenes/::1770795690
+Cube.tscn::PackedScene::3629062945728787209::1770769110::0::1::::<><><>0<>0<><>::
+Main.tscn::PackedScene::6553008114434116704::1770795690::0::1::::<><><>0<>0<><>::uid://cfl53ssaq5wrg::::res://Scripts/main.gd<>uid://cdg0qgmc53bdw::::res://Scenes/UI.tscn
+Sphere.tscn::PackedScene::7954808023724708167::1770794787::0::1::::<><><>0<>0<><>::
+UI.tscn::PackedScene::4997340996156114432::1770795011::0::1::::<><><>0<>0<><>::uid://bpsmc7kba8cg3::::res://Scripts/ui.gd
+::res://Scripts/::1770795011
+main.gd::GDScript::5148366226132721168::1770794876::0::1::::<>Node3D<><>0<>0<><>::
+ui.gd::GDScript::3477146009579653912::1770795011::0::1::::<>Control<><>0<>0<><>::
