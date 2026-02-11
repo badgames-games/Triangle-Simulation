@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c0mlc6xrkav1y"]
+
+[ext_resource type="Script" uid="uid://cfl53ssaq5wrg" path="res://Scripts/main.gd" id="1_idj7w"]
+[ext_resource type="PackedScene" uid="uid://cdg0qgmc53bdw" path="res://Scenes/UI.tscn" id="1_r150o"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r150o"]
+
+[sub_resource type="Sky" id="Sky_idj7w"]
+sky_material = SubResource("ProceduralSkyMaterial_r150o")
+
+[sub_resource type="Environment" id="Environment_kln2b"]
+background_mode = 2
+sky = SubResource("Sky_idj7w")
+
+[node name="Main" type="Node3D" unique_id=715669416]
+script = ExtResource("1_idj7w")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=86109294]
+transform = Transform3D(0.70710677, 0.45451945, -0.5416752, 0, 0.76604444, 0.6427876, 0.70710677, -0.45451945, 0.5416752, -15, 15, 15)
+fov = 70.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2136609061]
+
+[node name="UI" parent="CanvasLayer" unique_id=976488001 instance=ExtResource("1_r150o")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1123952637]
+environment = SubResource("Environment_kln2b")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=919661085]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 7, 16)
+
+[node name="Meshes" type="Node3D" parent="." unique_id=1302384535]
