@@ -14,7 +14,7 @@ config/name="Triangle Simulation"
 run/main_scene="uid://c0mlc6xrkav1y"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/image="uid://bgh0nrkru4cy1"
+boot_splash/image="uid://b20t8p6lhwsqw"
 config/icon="uid://cx77jlccgdrd3"
 
 [display]
